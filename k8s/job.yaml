@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: run-single-task
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: task
+          image: curlimages/curl
+          args:
+            - "-X"
+            - "GET"
+            - "http://task-runner-service/run-task"
