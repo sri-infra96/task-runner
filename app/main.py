@@ -10,7 +10,7 @@ def health():
 @app.get("/run-task")
 def run_task():
     task_id = str(uuid.uuid4())
-    duration = random.uniform(0.5, 2.0)
+    duration = random.uniform(2.0, 5.0)
     time.sleep(duration)
     return {"task_id": task_id, "duration_sec": duration}
 
