@@ -8,3 +8,6 @@ This repo contains a small FastAPI microservice + Kubernetes manifests for:
 - Kubernetes Job (one time workflow)
 - CronJob (scheduled workflow)
 - CI pipeline (lint and Docker build)
+  
+Summary:
+run_task() is a small fake workload generator that pretends to run a job by sleeping for 2 – 5 seconds and returning a unique task ID.
